@@ -30,7 +30,15 @@ export class PreviewTableComponent implements OnInit, OnChanges {
     'fieldType',
     'isRequired',
     'options',
+    'actions',
   ];
   // dataSource = this.formEntries;
   dataSource = this.formData;
+
+  deleteRow(element: any) {
+    const index = this.formData.indexOf(element);
+    if (index !== -1) {
+      this.formData.splice(index, 1);
+    }
+  }
 }

@@ -1,11 +1,3 @@
-<!-- <div *ngFor="let data of dataServices.formData">
-  <p>
-    <span>{{ data.fieldName }}</span
-    >" "<span>{{ data.fieldType }}</span
-    >" "<span>{{ data.isRequired }}</span
-    >" "<span>{{ data.options }}</span>
-  </p>
-</div> -->
 <table
   mat-table
   [dataSource]="dataServices.getValue()"
@@ -29,6 +21,16 @@
   <ng-container matColumnDef="options">
     <th mat-header-cell *matHeaderCellDef>Options</th>
     <td mat-cell *matCellDef="let element">{{ element.options }}</td>
+  </ng-container>
+
+  <!-- Adding delete button -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button color="warn" (click)="deleteRow(element)">
+        Delete
+      </button>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
