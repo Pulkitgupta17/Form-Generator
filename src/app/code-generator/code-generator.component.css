@@ -1,0 +1,35 @@
+div {
+  width: 55%;
+  padding-left: 10px;
+  padding-top: 4%;
+  margin: auto;
+  padding-bottom: 2%;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: xx-large;
+}
+
+pre {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  background-color: #323752;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  gap: 4rem;
+}
+
+button {
+  width: 100%;
+}

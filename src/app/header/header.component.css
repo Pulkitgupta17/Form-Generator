@@ -1,0 +1,25 @@
+/* div {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 25px;
+  margin-bottom: 25px;
+} */
+
+div {
+  display: flex;
+  align-items: center;
+  height: 12%;
+  justify-content: center; /* Set the height to 100% to fill the component height */
+  box-shadow: 2px 2px 15px 1px grey;
+}
+
+h1 {
+  text-align: center;
+  font-size: xxx-large;
+  margin: 0; /* Remove default margin for h1 */
+  font-family: "Pacifico", cursive;
+}

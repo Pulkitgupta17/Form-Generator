@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.try {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.try > form {
+  width: 45%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  border-style: solid;
+  border-width: 0.1ch;
+  box-shadow: 2px 2px 15px 1px grey;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.try > form > input,
+.try > form > select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.try > form > input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.try > form > input[type="submit"]:hover {
+  cursor: pointer;
+}

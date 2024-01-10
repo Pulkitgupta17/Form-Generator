@@ -1,0 +1,59 @@
+<div class="form-container-div">
+  <form class="input-form" [formGroup]="form" (ngSubmit)="generateForm()">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Field Label/Name"
+        formControlName="fieldName"
+        required
+      />
+      <mat-error *ngIf="form.get('fieldName')?.hasError('required')">
+        Field Name is required.
+      </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Field Type</mat-label>
+      <mat-select formControlName="fieldType">
+        <mat-option value="text">Text</mat-option>
+        <mat-option value="email">Email</mat-option>
+        <mat-option value="password">Password</mat-option>
+        <mat-option value="select">Select</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="form.get('fieldType')?.value === 'select'">
+      <mat-form-field *ngFor="let option of options.controls; let i = index">
+        <input
+          matInput
+          [placeholder]="'Option ' + (i + 1)"
+          [formControl]="option"
+        />
+      </mat-form-field>
+    </div>
+    <br />
+    <mat-checkbox formControlName="isRequired"
+      ><span class="checkbox-text">Is Required?</span></mat-checkbox
+    ><br />
+    <button
+      class="form-add-button"
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="addField()"
+      [disabled]="isAddButtonDisabled || form.get('fieldName')?.invalid"
+    >
+      Add Field</button
+    ><br />
+    <button
+      class="form-generate-button"
+      button
+      mat-raised-button
+      color="accent"
+      type="submit"
+    >
+      Generate Form
+    </button>
+  </form>
+  <app-preview-table *ngIf="showTable"></app-preview-table>
+</div>

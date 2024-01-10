@@ -1,0 +1,42 @@
+.form-container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-form,
+app-preview-table {
+  width: 45%;
+  margin-top: 2%;
+  padding-left: 10px;
+  padding-top: 2%;
+  /* margin: auto; */
+  padding-bottom: 2%;
+  background-color: white;
+}
+
+.input-form {
+  border-style: solid;
+  box-shadow: 2px 2px 15px 1px grey;
+  border-width: 0.1ch;
+}
+
+mat-form-field {
+  width: 85%;
+}
+
+.form-add-button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 17%;
+}
+
+.form-generate-button {
+  width: 30%;
+}
+
+.checkbox-text {
+  font-size: 2ch;
+  font-weight: 500;
+}
